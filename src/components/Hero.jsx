@@ -1,56 +1,142 @@
 import ring from "../assets/images/ring.webp";
-
+import Reveal from "./Reveal";
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-slate-950 flex items-center">
+    <section
+  className="
+    min-h-screen
+    flex
+    items-center
+    bg-slate-950
+    text-white
+  "
+>
 
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+  <div
+    className="
+      max-w-7xl
+      mx-auto
+      px-6
+      grid
+      md:grid-cols-2
+      gap-10
+      items-center
+    "
+  >
 
-        <div>
 
-          <p className="text-blue-500 font-semibold mb-3">
-            SMART RING
-          </p>
+    {/* Text */}
+    <Reveal>
 
-          <h1 className="text-6xl font-bold text-white leading-tight">
-            Aura Ring X
-          </h1>
+      <div>
 
-          <h2 className="text-gray-300 mt-5">
-            Tương lai của chăm sóc sức khỏe thông minh
-          </h2>
+        <h1
+          className="
+            text-5xl
+            md:text-6xl
+            font-bold
+            leading-tight
+          "
+        >
+          Công nghệ thông minh
+          <br />
 
-          <p className="text-gray-400 mt-8 leading-8">
-            Theo dõi nhịp tim, giấc ngủ, mức độ căng thẳng và các hoạt động hàng ngày của bạn với độ chính xác cao nhờ công nghệ AI. Thiết kế nhỏ gọn, thời trang và phù hợp với cuộc sống thường nhật.
-          </p>
+          <span className="text-blue-500">
+            trong một chiếc nhẫn
+          </span>
 
-          <div className="mt-10 flex gap-5">
+        </h1>
 
-            <button className="bg-blue-600 px-8 py-4 rounded-xl text-white">
-              Mua Ngay
-            </button>
 
-            <button className="border border-gray-500 px-8 py-4 rounded-xl text-white">
-              Tìm Hiểu Thêm
-            </button>
+        <p
+          className="
+            mt-6
+            text-slate-400
+            text-lg
+            max-w-xl
+          "
+        >
+          AuraRing giúp theo dõi sức khỏe,
+          hoạt động hằng ngày với thiết kế
+          nhỏ gọn và sang trọng.
+        </p>
 
-          </div>
+
+
+        <div className="mt-8 flex gap-4">
+
+
+          <a
+            href="#subscribe"
+            className="
+              bg-blue-600
+              hover:bg-blue-700
+              px-6
+              py-3
+              rounded-xl
+              transition
+            "
+          >
+            Mua ngay
+          </a>
+
+
+          <a
+            href="#features"
+            className="
+              border
+              border-slate-700
+              px-6
+              py-3
+              rounded-xl
+              hover:bg-slate-900
+              transition
+            "
+          >
+            Khám phá
+          </a>
+
 
         </div>
 
-        <div className="flex justify-center">
-
-          <img
-            src={ring}
-            alt="Aura Ring"
-            className="w-[500px]"
-          />
-
-        </div>
 
       </div>
 
-    </section>
+
+    </Reveal>
+
+
+
+    {/* Image */}
+    <Reveal>
+
+      <div
+        className="
+          flex
+          justify-center
+        "
+      >
+
+        <img
+          src={ring}
+          alt="AuraRing"
+          className="
+            w-full
+            max-w-md
+            rounded-3xl
+          "
+        />
+
+
+      </div>
+
+    </Reveal>
+
+
+
+  </div>
+
+</section>
   );
 };
 
