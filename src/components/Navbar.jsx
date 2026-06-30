@@ -139,6 +139,7 @@ const Navbar = () => {
             md:hidden
             text-white
           "
+          aria-label="Mở menu điều hướng"
           onClick={() => setOpen(!open)}
         >
 
