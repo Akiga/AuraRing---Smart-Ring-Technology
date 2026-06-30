@@ -75,52 +75,67 @@ const Features = () => {
 
             <Reveal key={feature.title}>
 
-            <div
-              key={feature.title}
-              className="
-                bg-slate-900
-                border
-                border-slate-800
-                rounded-2xl
-                p-8
-                hover:-translate-y-2
-                transition
-                duration-300
-              "
-            >
-
               <div
                 className="
-                  text-4xl
-                  mb-5
+                  group
+                  bg-slate-900/70
+                  backdrop-blur-xl
+                  border
+                  border-slate-800
+                  rounded-2xl
+                  p-8
+
+                  hover:-translate-y-3
+                  hover:border-blue-500/50
+                  hover:shadow-xl
+                  hover:shadow-blue-500/10
+
+                  transition
+                  duration-300
                 "
               >
-                {feature.icon}
+
+
+                <div
+                  className="
+                    text-4xl
+                    mb-5
+
+                    group-hover:scale-110
+                    transition
+                    duration-300
+                  "
+                >
+                  {feature.icon}
+                </div>
+
+
+
+                <h3
+                  className="
+                    text-xl
+                    font-semibold
+                    mb-3
+                  "
+                >
+                  {feature.title}
+                </h3>
+
+
+
+                <p
+                  className="
+                    text-slate-400
+                    leading-relaxed
+                  "
+                >
+                  {feature.description}
+                </p>
+
+
+
               </div>
 
-
-              <h3
-                className="
-                  text-xl
-                  font-semibold
-                  mb-3
-                "
-              >
-                {feature.title}
-              </h3>
-
-
-              <p
-                className="
-                  text-slate-400
-                  leading-relaxed
-                "
-              >
-                {feature.description}
-              </p>
-
-
-            </div>
 
             </Reveal>
 

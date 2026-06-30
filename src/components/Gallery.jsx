@@ -1,14 +1,18 @@
+import ring1 from "../assets/images/ring-1.webp";
+import ring2 from "../assets/images/ring-2.webp";
+import ring3 from "../assets/images/ring-3.webp";
+
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    src: ring1,
     title: "Thiết kế sang trọng",
   },
   {
-    src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+    src: ring2,
     title: "Công nghệ hiện đại",
   },
   {
-    src: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26",
+    src: ring3,
     title: "Phong cách tối giản",
   },
 ];
