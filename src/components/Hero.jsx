@@ -175,6 +175,8 @@ const Hero = () => {
               src={ring}
               alt="AuraRing"
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="
                 w-full
                 max-w-md
