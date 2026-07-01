@@ -1,4 +1,3 @@
-import ring from "../assets/images/ring.webp";
 import Reveal from "./Reveal";
 
 
@@ -12,10 +11,7 @@ const Hero = () => {
         flex
         items-center
         bg-slate-950
-        text-white
-      "
-    >
-
+        text-white">
       {/* Background glow */}
       <div
         className="
@@ -28,9 +24,7 @@ const Hero = () => {
           h-[500px]
           bg-blue-500/20
           blur-[120px]
-          rounded-full
-        "
-      />
+          rounded-full"/>
 
 
       <div
@@ -43,9 +37,7 @@ const Hero = () => {
           grid
           md:grid-cols-2
           gap-10
-          items-center
-        "
-      >
+          items-center">
 
 
         {/* Text */}
@@ -172,7 +164,7 @@ const Hero = () => {
           >
 
             <img
-              src={ring}
+              src="/ring.webp"
               alt="AuraRing"
               loading="eager"
               fetchPriority="high"
