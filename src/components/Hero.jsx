@@ -164,7 +164,7 @@ const Hero = () => {
           >
 
             <img
-              src="/ring.webp"
+              src="/ring-2.webp"
               alt="AuraRing"
               loading="eager"
               fetchPriority="high"
