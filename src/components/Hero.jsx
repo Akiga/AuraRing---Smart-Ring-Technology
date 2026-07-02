@@ -164,21 +164,21 @@ const Hero = () => {
           >
 
             <img
-              src="/ring-2.webp"
-              alt="AuraRing"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              className="
-                w-full
-                max-w-md
+            src="/ring-2.webp"
+            alt="AuraRing"
+            width="637"
+            height="359"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="
                 rounded-3xl
                 drop-shadow-[0_0_40px_rgba(59,130,246,0.4)]
                 hover:scale-105
                 transition
                 duration-500
               "
-            />
+          />
 
 
           </div>
