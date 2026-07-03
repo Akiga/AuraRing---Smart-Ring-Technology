@@ -43,7 +43,6 @@ const Navbar = () => {
       "
     >
 
-
       <nav
         className="
           max-w-7xl
@@ -58,9 +57,8 @@ const Navbar = () => {
 
 
         {/* Logo */}
-
         <a
-          href="#"
+          href="/"
           className="
             text-2xl
             font-bold
@@ -72,11 +70,7 @@ const Navbar = () => {
             Ring
           </span>
         </a>
-
-
-
         {/* Desktop Menu */}
-
         <ul
           className="
             hidden

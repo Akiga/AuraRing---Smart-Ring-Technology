@@ -1,18 +1,34 @@
 const API_URL = import.meta.env.VITE_API_URL;
+import axios from 'axios';
 
 export const subscribe = async (email) => {
-  const response = await fetch(`https://auraring-be.onrender.com/api/subscribe`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email }),
-  });
+  try{
+    const response = await axios.post(`https://auraring-be.onrender.com/api/subscribe`, {
+      email
+    });
+    return {
+      ok: true,
+      data: response.data
+    };
+  } catch (error) {
+    return {
+      ok: false,
+      data: error.response?.data || { message: "An error occurred while subscribing." }
+    };
+  }
+};
 
-  const data = await response.json();
-
-  return {
-    ok: response.ok,
-    data,
-  };
+export const getAllUsers = async () => {
+  try{
+    const response = await axios.get(`https://auraring-be.onrender.com/api/`);
+    return {
+      ok: true,
+      data: response.data
+    };
+  } catch (error) {
+    return {
+      ok: false,
+      data: error.response?.data || { message: "An error occurred while fetching users." }
+    };
+  }
 };
