@@ -1,5 +1,5 @@
 import ring1 from "../assets/images/ring-1.webp";
-import ring2 from "../assets/images/ring-2.webp";
+import ring2 from "../assets/images/ring-4.webp";
 import ring3 from "../assets/images/ring-3.webp";
 
 const images = [
