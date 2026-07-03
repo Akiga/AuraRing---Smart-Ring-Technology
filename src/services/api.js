@@ -1,7 +1,7 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
 export const subscribe = async (email) => {
-  const response = await fetch(`${API_URL}/subscribe`, {
+  const response = await fetch(`https://auraring-be.onrender.com/api/subscribe`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
