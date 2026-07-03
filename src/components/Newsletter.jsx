@@ -1,4 +1,36 @@
+import { useState } from "react";
+import { toast } from 'sonner'
+import { subscribe } from "../services/api";
 const Newsletter = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!email.trim()) {
+      toast.warning("Vui lòng nhập email");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const { ok, data } = await subscribe(email);
+
+      if (!ok) {
+        throw new Error(data.message);
+      }
+
+      toast.success(data.message);
+      setEmail("");
+    } catch (error) {
+      toast.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section
       id="subscribe"
@@ -37,6 +69,7 @@ const Newsletter = () => {
 
         {/* Form */}
         <form
+          onSubmit={handleSubmit}
           className="
             flex
             flex-col
@@ -49,6 +82,8 @@ const Newsletter = () => {
           <input
             type="email"
             placeholder="Nhập email của bạn"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="
               w-full
               md:w-96
@@ -66,6 +101,8 @@ const Newsletter = () => {
 
 
           <button
+            type="submit"
+            disabled={loading}
             className="
               bg-blue-600
               hover:bg-blue-700
@@ -74,9 +111,11 @@ const Newsletter = () => {
               py-3
               rounded-xl
               font-medium
+              disabled:opacity-50
+              disabled:cursor-not-allowed
             "
           >
-            Đăng ký
+            {loading ? "Đang gửi..." : "Đăng ký"}
           </button>
 
 
