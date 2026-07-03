@@ -25,14 +25,14 @@ const Admin = () => {
         <div className="max-w-6xl mx-auto">
 
           <h1 className="text-4xl font-bold mb-8">
-            Subscribers Dashboard
+            Quản lý người đăng ký
           </h1>
 
           {/* Cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div className="bg-slate-900 rounded-xl p-6 border border-slate-800">
               <p className="text-slate-400">
-                Total Subscribers
+                Tổng số người đăng ký
               </p>
               <h2 className="text-4xl font-bold mt-2">
                 {users.length}
@@ -41,7 +41,7 @@ const Admin = () => {
 
             <div className="bg-slate-900 rounded-xl p-6 border border-slate-800">
               <p className="text-slate-400">
-                Latest Subscriber
+                Người đăng ký mới nhất
               </p>
               <h2 className="text-lg font-semibold mt-2">
                 {users.length > 0
@@ -69,7 +69,7 @@ const Admin = () => {
                   </th>
 
                   <th className="p-4 text-left">
-                    Created At
+                    Thời gian đăng ký
                   </th>
                 </tr>
               </thead>
